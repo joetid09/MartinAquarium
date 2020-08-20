@@ -3,18 +3,44 @@ body {
 }
 
 #fishTank {
+    display: flex;
     border: 5px solid red;
+    
+}
+
+.fishlist {
+    display: flex;
+    flex: 3;
+    border: 3px solid gold;
+    justify-content: space-evenly;
+    flex-wrap: wrap;    
 }
 
 .fishCard {
     display: flex;
-    flex: 3;
-   flex-wrap: wrap;
-    margin: 1em;
-    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-basis: 15em;
+    border: 2px solid coral;
+    flex-wrap: wrap;
+
+}
+
+.card-image {
+    display: flex;
+    width: 10em; 
+    height: 10em;   
+    border: 3px solid ghostwhite;
 }
 
 .fish-image {
-    width: 100%;
-    height: auto;
+    width: 10em;
 }
+
+.fishTips {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: 3px solid green;
+}
+
