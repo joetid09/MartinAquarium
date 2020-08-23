@@ -3,7 +3,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "chatreuse",
         species: "Blue Yellow Tang",
-        Length: "3 in",
+        size: 3,
         diet: "Shrimp",
         location: 'the Ocean',
                 
@@ -12,7 +12,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "jethro",
         species: "Jelly Fish",
-        length: "Microscopic to 6 ft",
+        size: 6,
         diet: "Krill",
         harvestLocation: "Gulfs",
                 
@@ -21,7 +21,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "tilly",
         species: "Sunkissed Grapefruit",
-        length: "6 inches",
+        size: 6,
         diet: "Sea Cucumber Salad",
         harvestLocation: "Reefs",
                 
@@ -31,7 +31,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "bully",
         species: "Blue Tang",
-        length: "4 in",
+        size: 4,
         diet: "shrimp",
         harvestLocation: "6th Sea",
                 
@@ -40,7 +40,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "Gary",
         species: "Butter Fish",
-        length: "6 in",
+        size: 6,
         diet: "Biscuits",
         harvestLocation: "4th Sea",
                 
@@ -49,7 +49,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "Susan",
         species: "Orangello",
-        length: "21 in",
+        size: 21,
         diet: "Sugar",
         harvestLocation: "The Sea",
                 
@@ -58,7 +58,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "Ted",
         species: "Aussie Slippery",
-        length: "13 in",
+        size: 13,
         diet: "small fish",
         harvestLocation: "3rd Sea",
                 
@@ -67,7 +67,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "Dory",
         species: "Royal Blue Tang",
-        length: "18 cm",
+        size: 18,
         diet: "crustaceans",
         harvestLocation: ""
     },
@@ -75,7 +75,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "Archy",
         species: "Arc-Eye Hawkfish",
-        length: "20 cm",
+        size: 20,
         diet: "shrimp and other small fishes",
         harvestLocation: "Seaward reefs in the pacific ocean"
     },
@@ -83,7 +83,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "Pear",
         species: "Bartletts' Anthias",
-        length: "9 cm",
+        size: 9,
         diet: "zooplankton",
         harvestLocation: "Coral reef in the western Pacific ocean"
     },
@@ -91,7 +91,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "Axel Rose",
         species: "Axilspot Wrasse",
-        length: "20 cm",
+        size: 20,
         diet: "mollusks",
         harvestLocation: "A clear lagoon"
     },
@@ -99,7 +99,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "Angle",
         species: "Bicolor Angelfish",
-        length: "15 cm",
+        size: 15,
         diet: "coral polyps",
         harvestLocation: "Coral and rubble areas"
     },
@@ -107,7 +107,7 @@ const fishCollection = [
         image: "jelly.jpg",
         name: "Patricia",
         species: "Bignose Unicornfish",
-        length: "55 cm",
+        size: 55,
         diet: "zooplankton",
         harvestLocation: "Deep lagoon"
     },
@@ -116,4 +116,38 @@ const fishCollection = [
 
 export const useFish = () => {
     return fishCollection.slice()
+}
+
+export const holyFish = () => {
+    let mostHolyFishArray = [];
+
+    for (const theFish of fishCollection){
+        if(theFish.size % 3 ===0 ) {
+            mostHolyFishArray.push(theFish)
+        }
+    
+    }
+    return mostHolyFishArray
+}
+
+export const soldierFish = () => {
+    let soldierFishArray = [];
+
+    for (const theFish of fishCollection){
+        if(theFish.size % 5 === 0) {
+            soldierFishArray.push(theFish);
+        }
+    }
+    return soldierFishArray;
+}
+
+export const nonHolyFish = () => {
+    let nonHolyFishArray = [];
+
+    for (const theFish of fishCollection){
+        if(theFish.size % 5 !== 0 && theFish.size % 3 !==0 ) {
+            nonHolyFishArray.push(theFish);
+        }
+    }
+    return nonHolyFishArray;
 }
